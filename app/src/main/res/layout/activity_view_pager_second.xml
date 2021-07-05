@@ -1,0 +1,630 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center_horizontal"
+    android:orientation="vertical"
+    tools:context=".ViewPagerSecondActivity">
+
+    <ImageView
+        android:id="@+id/image_second_layout"
+        android:layout_width="match_parent"
+        android:layout_height="240dp"
+        android:layout_centerHorizontal="true"
+        android:padding="5dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ic_dashboard_black_24dp" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="10dp"
+                android:padding="5dp"
+                android:text="Title"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/desc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/title"
+                android:layout_centerHorizontal="true"
+                android:padding="10dp"
+                android:text="Description"
+                android:textSize="15sp" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/nutrition_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/desc"
+                android:layout_centerHorizontal="true"
+                android:background="@color/colorPrimaryDark"
+                android:padding="10dp"
+                app:cardCornerRadius="5dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/colorPrimaryDark">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:text="Nutrition Content"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/nutrients"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/nutrition_content"
+                android:layout_marginTop="10dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/colorPrimary">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:text="Nutrients"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:padding="10dp"
+                        android:text="Value per 100 g"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="20dp"
+                        android:padding="10dp"
+                        android:text="Unit"
+                        android:textStyle="bold" />
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/nutrientsvalue"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/nutrients">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/water"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:text="Water"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/energy"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/water"
+                        android:padding="10dp"
+                        android:text="Energy"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/protein"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/energy"
+                        android:padding="10dp"
+                        android:text="Protein"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/fat"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/protein"
+                        android:padding="10dp"
+                        android:text="Total fat"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/carb"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/fat"
+                        android:padding="10dp"
+                        android:text="Carbohydrate"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/fiber"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/carb"
+                        android:padding="10dp"
+                        android:text="Fiber"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/fiber"
+                        android:padding="10dp"
+                        android:text="Sugars"
+                        android:textStyle="bold" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/wateru"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginRight="20dp"
+                            android:padding="10dp"
+                            android:text="g"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/energyu"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/wateru"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginRight="20dp"
+                            android:padding="10dp"
+                            android:text="kcal"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/proteinu"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/energyu"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginRight="20dp"
+                            android:padding="10dp"
+                            android:text="g"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/fatu"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/proteinu"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginRight="20dp"
+                            android:padding="10dp"
+                            android:text="g"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/carbu"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/fatu"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginRight="20dp"
+                            android:padding="10dp"
+                            android:text="g"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/fiberu"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/carbu"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginRight="20dp"
+                            android:padding="10dp"
+                            android:text="g"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/fiberu"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginRight="20dp"
+                            android:padding="10dp"
+                            android:text="g"
+                            android:textStyle="bold" />
+
+
+                    </RelativeLayout>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/waterc"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:padding="10dp"
+                        android:text="10"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/energyc"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/waterc"
+                        android:layout_centerHorizontal="true"
+                        android:padding="10dp"
+                        android:text="10"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/proteinc"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/energyc"
+                        android:layout_centerHorizontal="true"
+                        android:padding="10dp"
+                        android:text="10"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/fatc"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/proteinc"
+                        android:layout_centerHorizontal="true"
+                        android:padding="10dp"
+                        android:text="10"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/carbc"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/fatc"
+                        android:layout_centerHorizontal="true"
+                        android:padding="10dp"
+                        android:text="10"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/fiberc"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/carbc"
+                        android:layout_centerHorizontal="true"
+                        android:padding="10dp"
+                        android:text="10"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/sugarc"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/fiberc"
+                        android:layout_centerHorizontal="true"
+                        android:padding="10dp"
+                        android:text="10"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/vitamins"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/nutrientsvalue"
+                android:background="@color/colorPrimaryDark"
+                android:padding="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                app:cardCornerRadius="5dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/colorPrimary">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:text="Vitamins"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/vitaminsvalue"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/vitamins">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/vitamin"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:text="Vitamin C"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/thiamin"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/vitamin"
+                        android:padding="10dp"
+                        android:text="Thiamin"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/riboflavin"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/thiamin"
+                        android:padding="10dp"
+                        android:text="Riboflavin"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/niacin"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/riboflavin"
+                        android:padding="10dp"
+                        android:text="Niacin"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/vitaminb"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/niacin"
+                        android:padding="10dp"
+                        android:text="Vitamin B"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/folate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/vitaminb"
+                        android:padding="10dp"
+                        android:text="Folate"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:id="@+id/vitamina"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/folate"
+                        android:padding="10dp"
+                        android:text="Vitamin A"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:id="@+id/vitamine"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/vitamina"
+                        android:padding="10dp"
+                        android:text="Vitamin E"
+                        android:textStyle="bold" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/waterun"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginRight="20dp"
+                            android:padding="10dp"
+                            android:text="mg"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/energyun"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/waterun"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginRight="20dp"
+                            android:padding="10dp"
+                            android:text="mg"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/proteinun"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/energyun"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginRight="20dp"
+                            android:padding="10dp"
+                            android:text="mg"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/fatun"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/proteinun"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginRight="20dp"
+                            android:padding="10dp"
+                            android:text="mg"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/carbun"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/fatun"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginRight="20dp"
+                            android:padding="10dp"
+                            android:text="mg"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/fiberun"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/carbun"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginRight="20dp"
+                            android:padding="10dp"
+                            android:text="ug"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/fiberun"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginRight="20dp"
+                            android:padding="10dp"
+                            android:text="ug"
+                            android:id="@+id/g"
+                            android:textStyle="bold" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/g"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginRight="20dp"
+                            android:padding="10dp"
+                            android:text="mg"
+                            android:textStyle="bold" />
+
+
+                    </RelativeLayout>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/vitamincc"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:padding="10dp"
+                        android:text="10"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/thiaminc"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/vitamincc"
+                        android:layout_centerHorizontal="true"
+                        android:padding="10dp"
+                        android:text="10"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/riboflavinc"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/thiaminc"
+                        android:layout_centerHorizontal="true"
+                        android:padding="10dp"
+                        android:text="10"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/niacinc"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/riboflavinc"
+                        android:layout_centerHorizontal="true"
+                        android:padding="10dp"
+                        android:text="10"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/vitaminbc"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/niacinc"
+                        android:layout_centerHorizontal="true"
+                        android:padding="10dp"
+                        android:text="10"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/folatec"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/vitaminbc"
+                        android:layout_centerHorizontal="true"
+                        android:padding="10dp"
+                        android:text="10"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/vitaminac"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/folatec"
+                        android:layout_centerHorizontal="true"
+                        android:padding="10dp"
+                        android:text="10"
+                        android:textStyle="bold" />
+                    <TextView
+                        android:id="@+id/vitaminec"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/vitaminac"
+                        android:layout_centerHorizontal="true"
+                        android:padding="10dp"
+                        android:text="10"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+        </RelativeLayout>
+    </ScrollView>
+
+</LinearLayout>

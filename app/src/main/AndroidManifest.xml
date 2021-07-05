@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.healthpro">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/splash"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/splash"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".Authentication.RegistrationProfile"></activity>
+        <activity android:name=".Authentication.Registration" />
+        <activity android:name=".Exercise.InfoExercise" />
+        <activity android:name=".Exercise.ExerciseActivity" />
+        <activity android:name=".SummaryCart" />
+        <activity android:name=".InfoActivity" />
+        <activity android:name=".Main2Activity" />
+        <activity android:name=".Authentication.Login">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".FoodList"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".ViewPagerSecondActivity" />
+        <activity
+            android:name=".HealthProMain"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".MainActivity">
+
+        </activity>
+    </application>
+
+</manifest>
